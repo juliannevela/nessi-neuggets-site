@@ -14,12 +14,12 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "incremental": true,
-        "baseUrl": "src/",
+        "baseUrl": ".",
         "paths": {
-            "@components": ["Components/*"],
-            "@stories": ["stories/*.stories.tsx"],
-            "@utils": ["Utils/*"],
-            "@styles": ["Styles/*"]
+            "@components": ["/Components/*"],
+            "@stories": ["/stories/*.stories.js"],
+            "@styles": ["/Styles/*.css"],
+            "@utils": ["/Utils/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src"],

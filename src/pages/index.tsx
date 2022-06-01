@@ -1,7 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import SiteForm from 'Components/Forms/form'
 import styles from 'Styles/Home.module.css'
 
 type HeadProps = {
@@ -88,7 +86,7 @@ const Home: NextPage = () => {
                             voluptatum illum, delectus libero similique
                             consectetur autem explicabo, magni odio.
                         </p>
-                        <SiteForm />
+                        {/* <SiteForm /> */}
                     </article>
                 </section>
             </main>
