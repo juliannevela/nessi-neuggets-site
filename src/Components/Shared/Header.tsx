@@ -1,12 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import styles from '../../styles/Home.module.css'
+import styles from 'Styles/Home.module.css'
+import Menu from 'Components/Molecules/Menu'
 
 const Header = () => {
-    const mobileNav = (
-        <nav className={styles.mobileNav}>
-            <ul>
+    const mobileNav = () => {
+        const [isOpen, setIsOpen] = React.useState(false)
+        const handleOpen = () => {
+            setIsOpen(!isOpen)
+            return isOpen
+        }
+
+        return (
+            <nav className={styles.mobileNav}>
+                <Menu isOpen={handleOpen()} />
+                {/* <ul>
                 <li>
                     <Link href='/about'>
                         <a>About</a>
@@ -22,15 +31,16 @@ const Header = () => {
                         <a>Contact</a>
                     </Link>
                 </li>
-            </ul>
-        </nav>
-    )
+            </ul> */}
+            </nav>
+        )
+    }
     return (
-        <header className='flex flex-col justify-center items-center border-sky-400 border-4'>
+        <header className='flex flex-col justify-center items-center bg-sky-400'>
             <img
                 className='scale-75'
                 alt="nessi's neuggets logo"
-                src='/assets/banner.svg'
+                src='/assets/logo.svg'
             />
             <nav className='flex flex-row justify-around w-full'>
                 <Link href='/'>Home</Link>

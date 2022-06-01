@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import SiteForm from '../components/forms/form'
-import styles from '../styles/Home.module.css'
+import SiteForm from 'Components/Forms/form'
+import styles from 'Styles/Home.module.css'
 
 type HeadProps = {
     metaTitle: string
@@ -12,7 +12,7 @@ type HeadProps = {
 const Home: NextPage = () => {
     return (
         // <div className={styles.container}>
-        <div>
+        <>
             <MetaProps
                 metaTitle="Nessi's Neuggets"
                 metaDesc='A place to share your thoughts and ideas.'
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                     </article>
                 </section>
             </main>
-        </div>
+        </>
     )
 }
 
