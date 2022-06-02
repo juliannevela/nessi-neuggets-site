@@ -17,12 +17,6 @@ const Home: NextPage = () => {
                 metaLink='https://nessisneuggets.com/'
             />
             <main className={styles.main}>
-                {/* <Image
-                    className={styles.logo}
-                    layout='fill'
-                    alt="nessi's neuggets logo"
-                    src='/assets/logo.svg'
-                /> */}
                 <section className={styles.description}>
                     <figure>
                         <img
